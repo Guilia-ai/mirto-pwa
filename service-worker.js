@@ -1,10 +1,14 @@
 const CACHE = "mirto-v3";
+
 const ASSETS = [
   "./",
   "./index.html",
   "./manifest.json",
   "./icons/mirto-192.png",
-  "./icons/mirto-512.png"
+  "./icons/mirto-512.png",
+  "./calendario-1.png",
+  "./calendario-2.png",
+  "./orari-bernina.jpeg"
 ];
 
 self.addEventListener("install", (e) => {
@@ -20,5 +24,7 @@ self.addEventListener("activate", (e) => {
 });
 
 self.addEventListener("fetch", (e) => {
-  e.respondWith(caches.match(e.request).then((r) => r || fetch(e.request)));
+  e.respondWith(
+    caches.match(e.request).then((r) => r || fetch(e.request))
+  );
 });
