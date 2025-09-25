@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Il Mirto – Guida Ospiti</title>
+  <meta name="description" content="Info casa, rifiuti, TV, emergenze, cosa fare.">
+  <meta name="theme-color" content="#0e1012">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="apple-touch-icon" href="./icons/mirto-192.png">
+  <style>
+    body{margin:0;font-family:system-ui,Arial,sans-serif;background:#0e1012;color:#eaeef3;line-height:1.5}
+    .wrap{max-width:900px;margin:0 auto;padding:20px}
+    h1{font-size:28px;margin:0 0 10px}
+    .card{background:#15181c;border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:14px;margin:10px 0}
+    .grid{display:grid;gap:10px}
+    @media(min-width:800px){.grid{grid-template-columns:repeat(2,1fr)}}
+    .badge{display:inline-block;background:rgba(255,255,255,.08);padding:6px 10px;border-radius:999px;margin-right:8px}
+    a.btn{display:inline-block;background:#8fd19e;color:#09110c;text-decoration:none;padding:10px 14px;border-radius:10px;font-weight:700}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Il Mirto – Guida Ospiti</h1>
+    <p class="badge">Wi-Fi: <b>Ilmirto</b> • Password: <b>IlmirtoGHtirano2025</b></p>
+    <p><a class="btn" href="https://wa.me/39XXXXXXXXXX?text=Ciao%20Giulia%2C%20sono%20un%20ospite%20de%20Il%20Mirto">Contatta su WhatsApp</a></p>
+
+    <div class="grid">
+      <div class="card">
+        <h2>♻️ Spazzatura & Riciclo</h2>
+        <ul>
+          <li>Lunedì — Indifferenziato (ore 06:00)</li>
+          <li>Mercoledì — Carta (ore 06:00)</li>
+          <li>Venerdì — Plastica/Metallo (ore 06:00)</li>
+          <li>Sabato — Umido (ore 06:00)</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>📺 TV & Streaming</h2>
+        <p>Canali TV: premi <b>SOURCE</b> → <b>ANTENNA</b>.<br>
+        HDMI (console/PC): <b>SOURCE</b> → <b>HDMI1</b>.<br>
+        App (Netflix/Prime): usa il tuo account e fai logout al check-out.</p>
+      </div>
+
+      <div class="card">
+        <h2>🏠 Regole della casa</h2>
+        <ul>
+          <li>Silenzio: 22:00–08:00</li>
+          <li>Non fumare in casa</li>
+          <li>Animali: su richiesta</li>
+          <li>Clima/riscaldamento: spegnere quando uscite</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>🚑 Emergenze</h2>
+        <ul>
+          <li><b>112</b> — Numero unico</li>
+          <li>Farmacia di turno — vedi Google Maps</li>
+          <li>Indirizzo: Via ai Castagneti 7, Tirano</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>🚆 Trasporti</h2>
+        <ul>
+          <li>Bernina Express: stazione a 10 min a piedi</li>
+          <li>Taxi: +39 XXXXXXXX</li>
+          <li>Bus locali: fermata più vicina XXXXX</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>🌄 Cosa fare</h2>
+        <ul>
+          <li>Entro 10’ — Centro storico di Tirano, Santuario</li>
+          <li>Entro 30’ — Valtellina trails</li>
+          <li>Gita 1 giorno — Bernina, Bormio</li>
+        </ul>
+      </div>
+    </div>
+
+    <p style="opacity:.7;margin-top:20px">© <span id="year"></span> Il Mirto – Guesthouse Tirano</p>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./service-worker.js');
+      });
+    }
+  </script>
+</body>
+</html>
