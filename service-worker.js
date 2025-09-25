@@ -1,4 +1,4 @@
-const CACHE = "mirto-v1";
+const CACHE = "mirto-v3";
 const ASSETS = [
   "./",
   "./index.html",
